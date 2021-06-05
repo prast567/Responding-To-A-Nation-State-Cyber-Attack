@@ -1,0 +1,19 @@
+# Provide the configuration lines you will update to ensure that Apache launches with group name as "apache-group" and user account as "apache-user".
+
+
+#Configuration lines:
+
+##Create a new group
+sudo groupadd apache-group
+
+## Create a new user
+sudo useradd -g apache-group apache-user
+
+## Take ownership
+sudo chown -R apache-user:apache-group /var/www/html
+
+## Change desired user and group into the /etc/apache2/envvars file
+export APACHE_RUN_USER=apache-user
+export APACHE_RUN_GROUP=apache-group
+
+

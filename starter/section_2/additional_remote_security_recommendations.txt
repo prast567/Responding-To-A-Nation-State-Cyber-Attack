@@ -1,0 +1,3 @@
+- Multifactor authentication
+- Using VPN(Virtual Private Network)
+- Using security protocols to secure sensitive data.
